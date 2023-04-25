@@ -12,6 +12,12 @@ public class View {
 		Scanner sc = new Scanner(System.in);
 		UserDao dao = new UserDao();
 		
+		System.out.println("동행복권 LOTTO 6/45");
+		
+		while(true) {
+			System.out.println("[1]회원가입 [2] 로그인 [3]");
+		}
+		
 		
 
 	}
