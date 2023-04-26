@@ -4,12 +4,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Random;
 
 public class UserDao {
 	
 	Connection conn = null;
 	PreparedStatement pstm = null;
 	ResultSet rs = null;
+	Random rd = new Random();
 	
 	String Name;
 	String Gender;
@@ -122,7 +125,7 @@ public class UserDao {
 		getConn();
 		ArrayList<UserDto> userList = new ArrayList<>();
 		
-		String sql = "select * from MEMBER";
+		String sql = "select * from LOTTO";
 		try {
 			pstm = conn.prepareStatement(sql);
 			rs = pstm.executeQuery(); //쿼리 실행문
@@ -145,6 +148,18 @@ public class UserDao {
 		close();
 		return userList;
 	}
+	
+	public void lottoNum() {
+		HashSet<Integer> set = new HashSet<Integer>(6);
+        while(true){
+            int num = rd.nextInt(45) + 1;
+            set.add(num);
+            if (set.size() >= 6){
+                break;
+            }
+        }
+	}
+	
 	
 
 }
