@@ -97,7 +97,7 @@ public class UserDao {
 			pstm.setString(1, InputId);
 			pstm.setString(2, InputPw);
 			rs = pstm.executeQuery();
-			
+			dto = new UserDto();
 			if(rs.next()) {
 				dto.setName(rs.getString("이름"));
 				dto.setGender(rs.getString("성별"));
@@ -106,6 +106,8 @@ public class UserDao {
 				dto.setInputPw(rs.getString("비밀번호"));
 				dto.setInputNick(rs.getString("닉네임"));
 			}
+			System.out.println(dto.getInputNick());
+			return dto;
 			
 		} catch (SQLException e) {
 			System.out.println("쿼리문 오류!");

@@ -1,38 +1,40 @@
 
 public class UserDto {
 	
-	private String Name;
-	private String Gender;
+	private String name;
+	private String gender;
 	private int birth;
-	private String InputId;
-	private String InputPw;
-	private String InputNick;
+	private String inputId;
+	private String inputPw;
+	private String inputNick;
+	
+	public UserDto() {};
 	
 	public UserDto(String name, String gender, int birth, 
 			String inputId, String inputPw, String inputNick) {
 		super();
-		Name = name;
-		Gender = gender;
+		this.name = name;
+		this.gender = gender;
 		this.birth = birth;
-		InputId = inputId;
-		InputPw = inputPw;
-		InputNick = inputNick;
+		this.inputId = inputId;
+		this.inputPw = inputPw;
+		this.inputNick = inputNick;
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public String getGender() {
-		return Gender;
+		return gender;
 	}
 
 	public void setGender(String gender) {
-		Gender = gender;
+		this.gender = gender;
 	}
 
 	public int getBirth() {
@@ -44,27 +46,27 @@ public class UserDto {
 	}
 
 	public String getInputId() {
-		return InputId;
+		return inputId;
 	}
 
 	public void setInputId(String inputId) {
-		InputId = inputId;
+		this.inputId = inputId;
 	}
 
 	public String getInputPw() {
-		return InputPw;
+		return inputPw;
 	}
 
 	public void setInputPw(String inputPw) {
-		InputPw = inputPw;
+		this.inputPw = inputPw;
 	}
 
 	public String getInputNick() {
-		return InputNick;
+		return inputNick;
 	}
 
 	public void setInputNick(String inputNick) {
-		InputNick = inputNick;
+		this.inputNick = inputNick;
 	}
 	
 	
