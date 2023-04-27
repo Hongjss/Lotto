@@ -12,7 +12,9 @@ public class View {
 		Scanner sc = new Scanner(System.in);
 		UserDao dao = new UserDao();
 		UserDto dto = null;
-		
+		LottoController lc = null;
+		Lotto lt = null;
+		int lotto =0;
 		
 		System.out.println("동행복권 LOTTO 6/45");
 		
@@ -53,8 +55,9 @@ public class View {
 				
 				
 			}else if(select == 4) {//당첨번호 뽑기
-				
-				
+				lc= new LottoController();
+				lt = lc.lottery();
+				System.out.println(lt.getLotto());
 			}else {
 				System.out.println("프로그램을 종료합니다.");
 				break;
