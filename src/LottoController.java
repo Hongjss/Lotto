@@ -12,6 +12,7 @@
 	        while(true){
 	            int num = rd.nextInt(45) + 1;
 	            set.add(num);
+	            System.out.println(num);
 	            if (set.size() >= 6){
 	                break;
 	            }
